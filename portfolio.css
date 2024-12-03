@@ -1,0 +1,95 @@
+a{
+ color:var(--text-60);
+  padding: 10px;
+  transition:.4s ease-in-out ;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  border-radius:10px;
+  align-items: center;
+  margin-bottom:10px;
+  background: var(--text-30);
+  border:1px solid var(--text-30);
+  box-shadow: 0 0 5px var(--text-30);
+}
+a::before{
+  content: "";
+  width:0;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  border-radius:10px;
+  background: var(--bg-30);
+  z-index: -1;
+  transition: .4s;
+}
+a:hover::before{
+  width:100%;
+  color:var(--text-60);
+}
+a:hover{
+  cursor:none;
+  color:var(--text-60);
+}
+.testimonial-container{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  margin-top:30px;
+}
+.testimonial-content{
+  margin:20px;
+  border-radius:10px;
+  padding: 10px;
+  text-align:center;
+  transition: .5s ease-in-out;
+  border:2px solid var(--text-30);
+}
+.testimonial-content:hover{
+  transform:scale(.95);
+}
+.testimonial-image{
+  display: flex;
+  justify-content: center;
+}
+.testimonial-content img{
+  width:250px;
+  border-radius:100%;
+  float:center;
+
+}
+.testimonial-container h1{
+  text-align: center;
+}
+.contact-section h1{
+  text-align: center;
+}
+.contact-info{
+  margin:0 20px;
+}
+.contact-info input{
+  padding:8px;
+  border:1px solid var(--text-30);
+  background: var(--bg-30);
+  border-radius:5px;
+  margin-bottom:15px;
+}
+.contact-info textarea{
+  padding:5px;
+  background: var(--bg-30);
+  border:1px solid var(--text-30);
+}
+.contact-info button{
+  padding:8px;
+  background: var(--text-30);
+  border-radius: 5px;
+}
+@media screen and (min-width:770px) {
+  .testimonial-image img{
+    width:500px;
+  }
+  .testimonial-content p{
+    font-size:1.5em;
+    line-height: 45px;
+  }
+}
